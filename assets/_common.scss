@@ -1,0 +1,222 @@
+.page-outer{
+  width:100%;
+  min-height: 82.5vh;
+  min-width: 20rem;
+}
+
+.container-default{
+  padding:2.5rem 3.75rem;
+  @media only screen and (max-width: $viewport-sm) {
+    padding:1.5rem 2.75rem;
+  }
+}
+
+.default-inner{
+  padding: 0rem 2rem;
+  @media only screen and (max-width:  $viewport-sm) {
+    //padding: 0rem 1rem;
+    padding: 0rem;
+  }
+}
+
+.form-section{
+  margin:1rem 1rem 1.5rem 1rem;
+  background-color: $background;
+  padding:1.5rem 1rem 0.5rem 1.5rem;
+  @media only screen and (max-width:  $viewport-sm) {
+    margin : 1rem 0rem;
+    padding: 0.75rem;
+  }
+}
+
+.curved-box{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0rem 0.13rem 0.31rem #0000001A;
+  border: 1px solid $lineColor1;
+  border-radius: 1.25rem;
+}
+
+.top-heading{ 
+  padding-bottom:2rem;
+  text-align: center; 
+  @media only screen and (max-width:  $viewport-sm) {
+    padding-bottom:1rem;
+  }
+}
+
+h1,h2,h3,h4{
+  margin:0px;
+}
+
+p a{
+  font-size:inherit;    //To overwrite the default font size of link(present inline in text), which is much smaller than font size of body
+}
+
+.err-message{
+  color:$danger;
+  font-weight:600;
+}
+
+.shaded{
+  background-color:$background;
+}
+
+.flex-box{
+  display: flex;
+  &.--space-between{
+    justify-content:space-between;
+  }
+  &.--wrap{
+    flex-wrap: wrap;
+  }
+  &.--vertical-bottom{
+    align-items:flex-end;
+  }
+}
+
+.vertical-flex{
+  display:flex;
+  flex-direction:column;
+}
+
+.cards-in-row{
+  display:flex;   
+  justify-content:center;   
+  align-items: center;
+  column-gap: 1rem;
+  @media only screen and (max-width: $viewport-sm){
+    flex-direction:column;
+    row-gap:1rem;
+  }
+  @media only screen and (min-width: $viewport-lg){
+    column-gap: 2rem;
+  }
+}
+
+.wide-cards{
+  display: flex;
+  column-gap:2rem;
+  justify-content:center;
+
+  @media only screen and (max-width: $viewport-sm){
+    flex-direction: column;
+    align-items: center;
+    row-gap:1rem;
+  }
+  
+  @media only screen and (min-width: $viewport-lg){
+    column-gap:3rem;
+  }
+
+  .item{
+    width:50%;
+    @media only screen and (max-width: $viewport-sm){
+      width:100%;
+    }
+  }
+}
+
+.display-ellipsis{
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  &.--1{
+    -webkit-line-clamp: 1;
+  }
+  &.--2{
+    -webkit-line-clamp: 2;
+  }
+  &.--3{
+    -webkit-line-clamp: 3;
+  }
+  &.--5{
+    -webkit-line-clamp: 5;
+  }
+  &.--7{
+    -webkit-line-clamp: 7;
+  }
+}
+
+//Custom Scrollbar - For Webkit browsers
+// ::-webkit-scrollbar {
+//   width: 10px;               /* width of the entire scrollbar */
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: $mildBlue;        /* color of the tracking area */
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background-color:$blue;    /* color of the scroll thumb */
+//   border-radius: 20px;       /* roundness of the scroll thumb */
+//   //border: 1px solid transparent;  /* creates padding around scroll thumb */
+// }
+
+//Picture on signup pages
+
+.signup-picture{
+  width:45%;
+  border: 1px solid #707070;
+  height:auto;
+  background-image:
+  linear-gradient(217deg, #00467FE0 0%, #0080A7B0 53%, #0080A7B0 60%, #00467FDE 100%),
+  url("~static/img/virtual-screen.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (max-width:  $viewport-sm) {
+    display:none;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.model-container {
+  border: 1px solid #E4E7ED;
+  min-width: 15rem;
+  .model-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: $viewport-sm) {
+      flex-direction: column;
+    }
+    margin: 1rem 2rem 1rem 2rem;
+  }
+  .scaffold-container, .plot-container, .flatmap-container {
+    height: 70vh;
+    overflow: hidden;
+  }
+}
+
+.profile-container {
+  min-width: 15rem;
+  min-height: 82.5vh;
+  @media only screen and (min-width: 37rem) {
+    display:flex;
+  }
+}
+
+.profile{
+  width:50%;
+  min-width:20rem;
+  @media only screen and (max-width: $viewport-md) {
+    width:100%;
+  }
+  box-sizing:border-box;
+}
+
+.indent {
+  text-indent: 1rem;
+  &.--2{
+    text-indent: 2rem;
+  }
+}
+
+::v-deep .el-select .el-input .el-select__caret.is-reverse {
+  padding-top: 0 !important;
+}

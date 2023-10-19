@@ -1,0 +1,1 @@
+declare module '@12-labours/twelve-labours-design-system-components';
